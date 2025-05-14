@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Азық-түліктер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        .product {
+            cursor: pointer;
+        }
+        .product img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            margin-top: 10px;
+            display: none;
+            max-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f9f9f9;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+  <h2>🛒 Өнімдер тізімі</h2>
+
+  <!-- 🔽 Өнімдер -->
+  <div class="product" onclick="showDetails(this)"><img src="https://egemen.kz/media/2023/09/05/snimok-ekrana-2023-09-05-231402.jpg" alt="Сүт">
+            <div id="desc1" class="description">
+            </div>
+  <div class="product" onclick="showDetails(this)"> <img src="https://egemen.kz/media/2022/05/18/1552555655_article_b.jpeg" alt="Ет">
+            <div id="desc2" class="description">
+            </div>
+  <div class="product" onclick="showDetails(this)"> <img src="https://th.bing.com/th/id/OIP.7O7-HkO64AapYF-QDkooJwHaFv?cb=iwp2&rs=1&pid=ImgDetMain " alt="Жемістер">
+            <div id="desc3" class="description">
+            </div>
+  <div class="product" onclick="showDetails(this)"> <img src="https://th.bing.com/th/id/OIP.svXktPdCXhYHye4lT1bT4AHaE8?cb=iwp2&rs=1&pid=ImgDetMain " alt="Көкөністер">
+            <div id="desc4" class="description">
+            </div>
+  <div class="product" onclick="showDetails(this)"> <img src="https://egemen.kz/media/2021/02/09/18-05-20.jpg?width=600&height=315" alt="Май">
+            <div id="desc5" class="description">
+            </div>
+
+  <script>
+    function showDetails(productElement) {
+      // Егер бұрын қосылған болса — қайталап қоспау
+      if (productElement.querySelector(".details")) return;
+
+      // Контейнер жасау
+      const details = document.createElement("div");
+      details.className = "details";
+
+      // Қосу батырмасы
+      const button = document.createElement("button");
+      button.textContent = "Қосу";
+
+      // Күн енгізу өрісі
+      const dateInput = document.createElement("input");
+      dateInput.type = "date";
+
+      // Қосу
+      details.appendChild(button);
+      details.appendChild(dateInput);
+      productElement.appendChild(details);
+
+      // Анимацияны іске қосу үшін кідіріс арқылы класс қосамыз
+      setTimeout(() => {
+        details.classList.add("show");
+      }, 50);
+    }
+  </script>
+
+</body>
+</html>
