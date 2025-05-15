@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Азық-түліктер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 30px;
+        }
+        .food-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .food-item {
+            cursor: pointer;
+        }
+        .food-item img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            margin-top: 10px;
+            display: none;
+            max-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f9f9f9;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .description input[type="date"], .description button {
+            margin-top: 10px;
+            padding: 6px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .description button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .description button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Азық-түліктер</h1>
+    <div class="food-images">
+        <div class="food-item" onclick="showDescription('desc1')">
+            <img src="https://egemen.kz/media/2023/09/05/snimok-ekrana-2023-09-05-231402.jpg" alt="Сүт">
+            <div id="desc1" class="description">
+                <strong>Сүт</strong><br>
+                Жарамдылық мерзімі: 5–7 күн<br>
+                Сақтау температурасы: +2°C–+6°C<br>
+                <input type="date"><br>
+                <button>Таңдау</button>
+            </div>
+        </div>
+        <div class="food-item" onclick="showDescription('desc2')">
+            <img src="https://egemen.kz/media/2022/05/18/1552555655_article_b.jpeg" alt="Ет">
+            <div id="desc2" class="description">
+                <strong>Ет</strong><br>
+                Жарамдылық мерзімі: 3–5 күн (тоңазытқышта)<br>
+                Сақтау температурасы: 0°C–+4°C<br>
+                <input type="date"><br>
+                <button>Таңдау</button>
+            </div>
+        </div>
+        <div class="food-item" onclick="showDescription('desc3')">
+            <img src="https://th.bing.com/th/id/OIP.7O7-HkO64AapYF-QDkooJwHaFv?cb=iwp2&rs=1&pid=ImgDetMain" alt="Жемістер">
+            <div id="desc3" class="description">
+                <strong>Жемістер</strong><br>
+                Жарамдылық мерзімі: 5–14 күн (түріне байланысты)<br>
+                Сақтау температурасы: +4°C–+8°C<br>
+                <input type="date"><br>
+                <button>Таңдау</button>
+            </div>
+        </div>
+        <div class="food-item" onclick="showDescription('desc4')">
+            <img src="https://th.bing.com/th/id/OIP.svXktPdCXhYHye4lT1bT4AHaE8?cb=iwp2&rs=1&pid=ImgDetMain" alt="Көкөністер">
+            <div id="desc4" class="description">
+                <strong>Көкөністер</strong><br>
+                Жарамдылық мерзімі: 5–10 күн<br>
+                Сақтау температурасы: +4°C–+10°C<br>
+                <input type="date"><br>
+                <button>Таңдау</button>
+            </div>
+        </div>
+        <div class="food-item" onclick="showDescription('desc5')">
+            <img src="https://egemen.kz/media/2021/02/09/18-05-20.jpg?width=600&height=315" alt="Май">
+            <div id="desc5" class="description">
+                <strong>Май</strong><br>
+                Жарамдылық мерзімі: 1–3 ай (түріне қарай)<br>
+                Сақтау температурасы: +5°C–+20°C<br>
+                <input type="date"><br>
+                <button>Таңдау</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDescription(id) {
+            const allDesc = document.querySelectorAll('.description');
+            allDesc.forEach(desc => desc.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
