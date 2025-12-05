@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Обучалка шашек</title>
+  <style>
+    body {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111;
+      border-bottom: 2px solid #1e90ff;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    header p {
+      color: #aaa;
+      font-size: 1.1em;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    h2 {
+      color: #fff;
+      border-left: 5px solid #1e90ff;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      background: #141414;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-left: 3px solid #fff;
+      border-radius: 6px;
+    }
+
+    .combo-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .combo-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .combo-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .combo-image img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 10px;
+      border: 2px solid #1e90ff;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.2);
+    }
+
+    pre {
+      background: #0f0f0f;
+      color: #1e90ff;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: "Courier New", monospace;
+      font-size: 0.95em;
+    }
+
+    p {
+      color: #ccc;
+    }
+
+    button {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #1476d8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      border-top: 1px solid #222;
+      font-size: 0.9em;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <button onclick="location.href='obu.html'">Шашки</button>
+    <button onclick="location.href='obuchenie.html'">Шахматы</button>
+  </header>
+  <header>
+    <h1>Обучалка шашек</h1>
+    <p>От простых ходов до хитрых тактик и победных схем</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Основные правила игры</h2>
+      <ul>
+        <li><strong>Доска</strong> — 8×8 клеток, игра ведётся по тёмным.</li>
+        <li><strong>Начальная позиция</strong> — шашки занимают три первых ряда.</li>
+        <li><strong>Ход</strong> — только по диагонали вперёд.</li>
+        <li><strong>Бой</strong> — обязателен. Если можешь бить — обязан.</li>
+        <li><strong>Дамка</strong> — шашка, достигшая последнего ряда, ходит и бьёт во все стороны.</li>
+        <li><strong>Победа</strong> — когда у соперника нет ходов или шашек.</li>
+      </ul>
+    </section>
+
+    
+
+    <section>
+      <h2>Игровые термины</h2>
+      <ul>
+        <li><strong>Темп</strong> — преимущество в скорости ходов.</li>
+        <li><strong>Цугцванг</strong> — любое твое действие ведёт к проигрышу.</li>
+        <li><strong>Связка</strong> — шашки стоят так, что защищают друг друга от боя.</li>
+        <li><strong>Блокада</strong> — ты ограничиваешь подвижность шашек соперника.</li>
+        <li><strong>Прорыв</strong> — резкий ход для прохода к дамкам.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Советы игрокам</h2>
+      <ul>
+        <li> Контролируй центр доски — оттуда ты управляешь игрой.</li>
+        <li> Если можешь побить несколькими способами — выбирай тот, что выгоднее по позиции.</li>
+        <li> Не торопись делать дамку — иногда лучше укрепить оборону.</li>
+        <li> Создавай "цепочку" шашек — она защищает и атакует одновременно.</li>
+        <li> Старайся играть “на темп” — заставляй соперника ходить в невыгодные клетки.</li>
+      </ul>
+    </section>
+
+    
+
+    <section>
+      <h2>Мотивация</h2>
+      <p>Шашки — это школа логики и терпения. Каждый ход — это выбор, который формирует победу.</p>
+      <p>Играй, анализируй, думай наперёд — и ты станешь мастером!</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Обучалка шашек — Думай на два хода вперёд</p>
+  </footer>
+  <script>
+window.addEventListener("load", function() {
+  document.body.classList.add("loaded");
+});
+</script>
+
+
+</body>
+</html>
